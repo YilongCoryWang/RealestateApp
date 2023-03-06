@@ -2,14 +2,11 @@ import React from "react";
 import { Button, Form, Input } from "antd";
 import useLogin from "../hooks/useLogin";
 import { useNavigate } from "react-router-dom";
-import { updateLoginStatus } from "../store/loginStatus.slice";
-import { useDispatch } from "react-redux";
 
-const onFinish = async (loginMutation: Function, navigate: Function, dispatch: Function, values: any) => {
+const onFinish = async (loginMutation: Function, navigate: Function, values: any) => {
   const {status, token} = await loginMutation(values)
   if((status === 0) && token) {
     localStorage.setItem("token", token)
-    dispatch(updateLoginStatus(true))
     navigate("/")
   }
 };
@@ -21,7 +18,6 @@ const onFinishFailed = (errorInfo: any) => {
 const Login: React.FC = () => {
   const { mutateAsync: loginMutation, status, reset } = useLogin();
   const navigate = useNavigate()
-  const dispatch = useDispatch();
 
   return (
     <Form
@@ -30,7 +26,7 @@ const Login: React.FC = () => {
       wrapperCol={{ span: 16 }}
       style={{ maxWidth: 600 }}
       initialValues={{ remember: true }}
-      onFinish={onFinish.bind(null, loginMutation, navigate, dispatch)}
+      onFinish={onFinish.bind(null, loginMutation, navigate)}
       onFinishFailed={onFinishFailed}
       autoComplete="off"
     >

@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
 import { PropertyCardProps } from "../../types";
 import { Card, Image } from "antd";
 import { REACT_APP_BASE_URL } from '../../config'
@@ -7,7 +6,7 @@ import { REACT_APP_BASE_URL } from '../../config'
 const PropertyCard = (props: PropertyCardProps) => {
   const { property } = props;
   let link = `/property/${property.id}`;
-  const isLogin = useSelector((state: any) => state.isLogin);
+  const isLogin = !!localStorage.getItem("token")
   if (!isLogin) {
     link = "/login";
   }
