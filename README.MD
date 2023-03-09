@@ -11,7 +11,7 @@ A realestate app displays real estate properties by categories (forsale, rent, s
 - Only authenticated users (have to login) to view property details.
 
 ## Tech stacks
-Client: React Redux/toolkit Typescript AntDesign
+Client: React Redux/toolkit React-query Typescript AntDesign
 
 Server: NodeJS JWT Postgresql
 
