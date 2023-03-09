@@ -13,6 +13,6 @@ A realestate app displays real estate properties by categories (forsale, rent, s
 ## Tech stacks
 Client: React Redux/toolkit Typescript AntDesign
 
-Server: NodeJS Postgresql
+Server: NodeJS JWT Postgresql
 
 ---
