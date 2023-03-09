@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { PropertyCardProps } from "../../types";
+import { PropertyCardProps } from "../../models/property";
 import { Card, Image } from "antd";
 import { REACT_APP_BASE_URL } from '../../config'
 

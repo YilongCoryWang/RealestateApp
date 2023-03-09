@@ -1,5 +1,5 @@
 import { useQuery } from "react-query";
-import { PropertyDetailsResponse } from "../types"
+import { PropertyDetailsResponse } from "../models/property"
 import getPropertyDetails from '../api/getPropertyDetails'
 
 const useGetPropertyDetails = (id: string, token: string) => {

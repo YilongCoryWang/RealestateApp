@@ -1,6 +1,6 @@
 import getProperties from "../api/getProperties";
 import { useQuery } from "react-query";
-import { PropertyListResponse } from "../types"
+import { PropertyListResponse } from "../models/property"
 
 const useGetProperties = (status: string) => {
   return useQuery<PropertyListResponse, Error>(`get-properties-${status}`, async () => {

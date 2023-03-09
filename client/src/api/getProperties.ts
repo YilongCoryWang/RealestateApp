@@ -1,4 +1,4 @@
-import { PropertyListResponse } from "../types";
+import { PropertyListResponse } from "../models/property";
 import {REACT_APP_BASE_URL} from '../config'
 
 async function getProperties(status: string): Promise<PropertyListResponse> {

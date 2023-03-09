@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { Image } from "antd";
-import { PropertyParams } from "../types";
+import { PropertyParams } from "../models/property";
 import useGetPropertyDetails from "../hooks/useGetPropertyDetails";
 import { REACT_APP_BASE_URL } from "../config";
 

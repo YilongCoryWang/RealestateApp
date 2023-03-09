@@ -1,5 +1,5 @@
 import { REACT_APP_BASE_URL } from "../config";
-import { UserParams } from "../types";
+import { UserParams } from "../models/user";
 
 async function login(values: UserParams): Promise<string> {
   const result = await fetch(`${REACT_APP_BASE_URL}/user/login`, {
