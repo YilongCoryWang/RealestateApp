@@ -15,7 +15,11 @@ const onFinishFailed = (errorInfo: any) => {
   console.log("Failed:", errorInfo);
 };
 
-const Login: React.FC = () => {
+type LoginProps = {
+  submitHandler?: (values: any)=>void
+}
+
+const Login: React.FC<LoginProps> = (props) => {
   const { mutateAsync: loginMutation, status, reset } = useLogin();
   const navigate = useNavigate()
 
@@ -26,7 +30,7 @@ const Login: React.FC = () => {
       wrapperCol={{ span: 16 }}
       style={{ maxWidth: 600 }}
       initialValues={{ remember: true }}
-      onFinish={onFinish.bind(null, loginMutation, navigate)}
+      onFinish={props.submitHandler ? props.submitHandler : onFinish.bind(null, loginMutation, navigate)}
       onFinishFailed={onFinishFailed}
       autoComplete="off"
     >
