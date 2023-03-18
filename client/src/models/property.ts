@@ -41,3 +41,13 @@ export type PropertyCardProps = {
 export type PropertyParams = {
   id: string;
 };
+
+ export type LoginProps = {
+  submitHandler?: (values: any) => void;
+};
+
+export type LoginResponse = {
+  message: string;
+  status: number;
+  token: string;
+};
