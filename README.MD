@@ -2,7 +2,9 @@
 # Realestate App
 
 ## Description
-A realestate app displays real estate properties by categories (forsale, rent, sold).
+A realestate app
+
+- Displays real estate properties by categories (forsale, rent, sold).
 
 - User authentication and authorization process included.
 
@@ -10,9 +12,13 @@ A realestate app displays real estate properties by categories (forsale, rent, s
 
 - Only authenticated users (have to login) to view property details.
 
-## Tech stacks
-Client: React Redux/toolkit React-query Typescript AntDesign
+- Add, update and delete properties through admin portal
 
-Server: NodeJS JWT Postgresql
+## Tech stacks
+Client: React, Redux/toolkit, React-query, Typescript, AntDesign
+
+Server: NodeJS, JWT, Postgresql
+
+Admin Portal Client: React, Redux-tool-kit query, AntDesign
 
 ---
