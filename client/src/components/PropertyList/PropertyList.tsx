@@ -18,6 +18,10 @@ const PropertyList = () => {
 
   const { data: properties } = data;
 
+  if(!properties){
+    return <>No property found</>
+  }
+
   return (
     <>
       {properties.map((property) => {
