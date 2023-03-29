@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { PersistGate } from "redux-persist/integration/react";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
 import AppRouter from "./router/AppRouter";
 import { Provider } from "react-redux";
 import store, { persistor } from "./store";
@@ -27,6 +28,7 @@ root.render(
       <PersistGate persistor={persistor}>
         <QueryClientProvider client={queryClient}>
           <AppRouter />
+          <ReactQueryDevtools initialIsOpen={false}/>
         </QueryClientProvider>
       </PersistGate>
     </Provider>
